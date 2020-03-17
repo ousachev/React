@@ -4,5 +4,5 @@
 
 Для запуска:
 
-1. Yarn install
+1. Yarn 
 2. Yarn start
