@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import classes from './QuizList.module.scss'
 import { NavLink } from 'react-router-dom'
 
-export default class QuizList extends Component {
+const QuizList = () => {
 
-    renderQuizes(){
+  const renderQuizes = () =>{
         return [1,2,3].map((quiz,index)=>{
             return(
                 <li 
@@ -18,16 +18,17 @@ export default class QuizList extends Component {
         })
     }
 
-    render() {
         return (
             <div className={classes.QuizList}>
                 <div>
                 <h1>Список тестов</h1>
                 <ul>
-                    {this.renderQuizes()}
+                    {renderQuizes()}
                 </ul>
                 </div>
             </div>
         )
-    }
+
 }
+
+export default QuizList;

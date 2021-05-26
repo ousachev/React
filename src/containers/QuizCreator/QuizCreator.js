@@ -1,52 +1,40 @@
-import React, { Component } from 'react'
-import classes from './QuizCreator.module.scss'
-import Button from '../../components/UI/Button/Button'
+import React from "react";
+import classes from "./QuizCreator.module.scss";
+import Button from "../../components/UI/Button/Button";
 
-export default class QuizCreator extends Component {
+const QuizCreator = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
 
-    submitHandler =(event)=>{
-        event.preventDefault()
-    }
+  const addQuestionHandler = () => {};
 
-    addQuestionHandler = ()=>{
+  const createQuizHandler = () => {};
 
-    }
+  return (
+    <div className={classes.QuizCreator}>
+      <divdiv>
+        <h1>Создание теста</h1>
+        <form onSubmit={submitHandler}>
+          <input type="text" />
+          <hr />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
 
-    createQuizHandler = ()=>{
+          <select/>
 
-    }
+          <Button type="primary" onClick={addQuestionHandler}>
+            Добавить вопрос
+          </Button>
+          <Button type="success" onClick={createQuizHandler}>
+            Создать тест
+          </Button>
+        </form>
+      </divdiv>
+    </div>
+  );
+};
 
-    render() {
-        return (
-            <div className={classes.QuizCreator}>
-                <divdiv>
-                <h1>Создание теста</h1>
-                <form onSubmit={this.submitHandler}>
-
-                    <input type="text"/>
-                    <hr/>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
-                    <input type="text"/>
-
-                    <select ></select>
-
-                    <Button 
-                    type="primary"
-                    onClick={this.addQuestionHandler}
-                    >
-                        Добавить вопрос
-                    </Button>
-                    <Button 
-                    type="success"
-                    onClick={this.createQuizHandler}
-                    >
-                        Создать тест
-                    </Button>
-                </form>
-                </divdiv>
-            </div>
-        )
-    }
-}
+export default QuizCreator;
